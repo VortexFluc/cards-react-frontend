@@ -3,7 +3,7 @@ import Card from "../dto/Card.ts";
 import CardApi from "../api/CardApi.ts";
 import {z} from "zod";
 
-class CardEntityService extends BaseEntityService<Card, CardApi> {
+class CardsService extends BaseEntityService<Card, CardApi> {
     getApi(): CardApi {
         return new CardApi();
     }
@@ -22,4 +22,4 @@ class CardEntityService extends BaseEntityService<Card, CardApi> {
 
 }
 
-export default CardEntityService;
+export default CardsService;

@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import {PieChartOutlined,} from '@ant-design/icons';
 import type {MenuProps} from 'antd';
 import {Breadcrumb, Layout, Menu, theme} from 'antd';
-import CardsTable from "./page/cards/table/CardsTable.tsx";
+import CardsPage from "./page/cards/CardsPage.tsx";
+import CardsService from "./model/cards/service/CardsService.ts";
 
 const {Header, Content, Footer, Sider} = Layout;
 
@@ -42,7 +43,7 @@ const App: React.FC = () => {
                 <Header title={'CARDS'} style={{padding: 0, background: colorBgContainer}}/>
                 <Content style={{margin: '0 16px'}}>
                     <Breadcrumb style={{margin: '16px 0'}} items={[{title: 'User'}, {title: 'Bill'}]}/>
-                    <CardsTable />
+                    <CardsPage service={new CardsService()}/>
                 </Content>
                 <Footer style={{textAlign: 'center'}}>
                     Ant Design ©{new Date().getFullYear()} Created by Ant UED
